@@ -14,7 +14,7 @@ asdasd
 .test {
     color: @red;
     .ff {
-        color: red;
+        color: black;
     }
 }
 </style>
