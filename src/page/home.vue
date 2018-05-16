@@ -1,10 +1,14 @@
 <template>
     <div>
+      home
       <slideShow></slideShow>
+      <slidesGrid></slidesGrid>
     </div>
 </template>
 <script>
 import slideShow from '../components/slideshow'
+import slidesGrid from '../components/slidesGrid'
+
 export default {
   data () {
     return {
@@ -15,7 +19,8 @@ export default {
   computed: {
   },
   components: {
-    slideShow
+    slideShow,
+    slidesGrid
   }
 }
 </script>

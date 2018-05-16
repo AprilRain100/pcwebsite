@@ -9,12 +9,10 @@
         <router-link :to="'/newsCenter'">新闻资讯</router-link>
         <router-link :to="'/employers'">企业服务</router-link>
         <router-link :to="'/onlineMessage'">在线留言</router-link>
-      </div>
-    </div>
-    <div class="foot">
-      asdadasd
+  </div>
     </div>
     <router-view/>
+
   </div>
 </template>
 
