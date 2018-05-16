@@ -5,11 +5,11 @@
       <div style="float: right;">
         <router-link :to="'/'">首页</router-link>
         <router-link :to="'/aboutUs'">关于我们</router-link>
-        <router-link :to="'/contactUs'">联系我们</router-link>
         <router-link :to="'/newsCenter'">新闻资讯</router-link>
         <router-link :to="'/employers'">企业服务</router-link>
+        <router-link :to="'/contactUs'">联系我们</router-link>
         <router-link :to="'/onlineMessage'">在线留言</router-link>
-  </div>
+      </div>
     </div>
     <router-view/>
 
@@ -31,16 +31,11 @@ export default {
 }
 .head{
   width: 1200px;
-  height: 100px;
-  line-height: 100px;
-  background: red;
+  height: 80px;
+  line-height: 80px;
   margin: 0 auto;
 }
-.foot{
-  width: 100%;
-  height: 150px;
-  height: 150px;
-  position: fixed;
-  bottom: 0;
+.head a{
+  padding: 0 20px;
 }
 </style>

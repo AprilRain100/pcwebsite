@@ -1,13 +1,14 @@
 <template>
     <div>
-      home
       <slideShow></slideShow>
       <slidesGrid></slidesGrid>
+      <footers></footers>
     </div>
 </template>
 <script>
 import slideShow from '../components/slideshow'
 import slidesGrid from '../components/slidesGrid'
+import footers from '../components/footer'
 
 export default {
   data () {
@@ -20,7 +21,8 @@ export default {
   },
   components: {
     slideShow,
-    slidesGrid
+    slidesGrid,
+    footers
   }
 }
 </script>
