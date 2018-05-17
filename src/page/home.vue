@@ -2,17 +2,16 @@
     <div>
       <slideShow></slideShow>
       <slidesGrid></slidesGrid>
+      <div class="newsData"></div>
+      <touchMe></touchMe>
       <footers></footers>
-      <div class="mymap">
-        <mapDrag @drag="dragMap" lat="22.524491" lng="113.942695"></mapDrag>
-      </div>
     </div>
 </template>
 <script>
 import slideShow from '../components/slideshow'
 import slidesGrid from '../components/slidesGrid'
+import touchMe from '../components/touchMe'
 import footers from '../components/footer'
-import mapDrag from '../components/mapDrag'
 
 export default {
   data () {
@@ -26,8 +25,8 @@ export default {
   components: {
     slideShow,
     slidesGrid,
-    footers,
-    mapDrag
+    touchMe,
+    footers
   },
   methods: {
     dragMap (data) {
@@ -39,10 +38,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  .mymap{
-    width: 500px;
-    height: 300px;
-  }
-  .m-part .mapbox{ width: 600px; height: 400px; margin-bottom: 20px; float: left; }
-
+.newsData{
+  width: 100%;
+  height: 400px;
+  background: #eee;
+}
 </style>

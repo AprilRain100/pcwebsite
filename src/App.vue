@@ -29,6 +29,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+html,body{
+  padding: 0;
+  margin: 0;
+}
 .head{
   width: 1200px;
   height: 80px;
@@ -36,6 +40,18 @@ export default {
   margin: 0 auto;
 }
 .head a{
-  padding: 0 20px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  text-decoration: none;
+  color: #000;
 }
+/*.head a:hover{*/
+  /*color: #37a5e9;*/
+/*}*/
+/*.head a.router-link-active{*/
+  /*color:#37a5e9;*/
+  /*border-bottom: 2px solid #009fe9;*/
+/*}*/
 </style>

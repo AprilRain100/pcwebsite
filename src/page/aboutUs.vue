@@ -33,16 +33,16 @@ export default {
 <style lang="less" scoped>
   .test{
     width: 100%;
-    height: 300px;
+    height: 350px;
     background: #000;
     img{
       width: 100%;
-      height: 300px;
+      height: 350px;
     }
   }
   .aboutUs{
     width:100%;
-    height: 220px;
+    height: 295px;
     padding: 30px 0 0 0;
     text-align: center;
     color: #888888;

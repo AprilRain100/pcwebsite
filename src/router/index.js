@@ -38,6 +38,10 @@ export default new Router({
       path: '/onlineMessage',
       name: 'onlineMessage',
       component: onlineMessage
+    },
+    {
+      path: '*',
+      redirect: '/home'
     }
   ]
 })

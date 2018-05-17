@@ -1,13 +1,12 @@
 <template>
   <div>
     <slideShow></slideShow>
-    <slidesGrid></slidesGrid>
+    <div class="newsInformation"></div>
     <footers></footers>
   </div>
 </template>
 <script>
 import slideShow from '../components/slideshow'
-import slidesGrid from '../components/slidesGrid'
 import footers from '../components/footer'
 
 export default {
@@ -21,11 +20,14 @@ export default {
   },
   components: {
     slideShow,
-    slidesGrid,
     footers
   }
 }
 </script>
 <style lang="less" scoped>
-
+.newsInformation{
+  width: 100%;
+  height: 700px;
+  background: #fff;
+}
 </style>
