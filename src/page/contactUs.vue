@@ -12,6 +12,9 @@ import touchMe from '../components/touchMe'
 import footers from '../components/footer'
 export default {
   data () {
+    return{
+
+    }
   },
   computed: {
   },

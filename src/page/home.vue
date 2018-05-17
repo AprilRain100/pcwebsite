@@ -4,13 +4,13 @@
       <slidesGrid></slidesGrid>
       <div class="newsData"></div>
       <touchMe></touchMe>
-      <footers></footers>
       <form-tab @clickList="clickList" :news="news" :industryList="industryList"></form-tab>
       <div>{{msg}}</div>
       <pagination :totalPage="parentTotalPage" :currentPage="parentCurrentpage" :changeCallback="parentCallback"></pagination>
       <div class="mymap">
         <mapDrag @drag="dragMap" lat="22.524491" lng="113.942695"></mapDrag>
       </div>
+      <footers></footers>
     </div>
 </template>
 <script>

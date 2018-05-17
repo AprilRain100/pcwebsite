@@ -2,13 +2,9 @@
   <div id="app">
     <div class="head">
       <span>Internet Design</span>
-      <div style="float: right;">
-        <router-link :to="'/'">首页</router-link>
-        <router-link :to="'/aboutUs'">关于我们</router-link>
-        <router-link :to="'/newsCenter'">新闻资讯</router-link>
-        <router-link :to="'/employers'">企业服务</router-link>
-        <router-link :to="'/contactUs'">联系我们</router-link>
-        <router-link :to="'/onlineMessage'">在线留言</router-link>
+      <div id="menu" style="float: right;">
+        <a :class="{'selec': index === selecIndex}" href="javascript:;" v-for="(item, index) in nav" v-text="item.text" @click="routerLink(item.path, index)"></a>
+        <div class="menubg"></div>
       </div>
     </div>
     <router-view/>
@@ -18,7 +14,56 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      nav: [
+        {
+          text: '首页',
+          path: '/'
+        },
+        {
+          text: '关于我们',
+          path: '/aboutUs'
+        },
+        {
+          text: '新闻资讯',
+          path: '/newsCenter'
+        },
+        {
+          text: '企业服务',
+          path: '/employers'
+        },
+        {
+          text: '联系我们',
+          path: '/contactUs'
+        },
+        {
+          text: '在线留言',
+          path: '/onlineMessage'
+        }
+      ],
+      selecIndex: 0
+    }
+  },
+  methods: {
+    routerLink (path, index) {
+      this.$router.push(path);
+      this.selecIndex = index;
+      let bgWidth = document.querySelector(".menubg")
+      let selfLeft = document.querySelectorAll("#menu a")[index].offsetLeft;
+      bgWidth.style.left = path === '/' ? `${selfLeft}px` : `${selfLeft + 15}px`
+    }
+  },
+  mounted() {
+    //获取li
+    let liwidth = document.querySelectorAll("#menu a")
+    //背景
+    let bgWidth = document.querySelector(".menubg")
+    //设置背景的宽度
+    bgWidth.style.width = liwidth[0].offsetWidth + 'px'
+  },
+
 }
 </script>
 
@@ -41,6 +86,7 @@ html,body{
   margin: 0 auto;
 }
 .head a{
+  position: relative;
   display: inline-block;
   height: 40px;
   line-height: 40px;
@@ -48,11 +94,24 @@ html,body{
   text-decoration: none;
   color: #000;
 }
-/*.head a:hover{*/
-  /*color: #37a5e9;*/
-/*}*/
-/*.head a.router-link-active{*/
-  /*color:#37a5e9;*/
-  /*border-bottom: 2px solid #009fe9;*/
-/*}*/
+.head a:hover{
+  color: #37a5e9;
+}
+.selec {
+  color: #37a5e9!important;
+}
+  #menu {
+    position: relative;
+    .menubg {
+      position: absolute;
+      background: #009fe9;
+      height: 2px;
+      bottom: 25px;
+      z-index: 1;
+      transition: all .3s;
+      left: 0
+    }
+
+  }
+
 </style>

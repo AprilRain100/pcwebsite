@@ -37,6 +37,10 @@ export default new Router({
   routes: [
     {
       path: '/',
+      component: home
+    },
+    {
+      path: '/home',
       name: 'home',
       component: home
     },

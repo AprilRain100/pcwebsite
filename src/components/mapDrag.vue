@@ -120,7 +120,6 @@ export default {
             nearestRoad: data.nearestRoad,
             nearestPOI: data.nearestPOI
           }
-          address = data.address || '广东省深圳市南山区粤海街道深圳百度国际大厦'
         })
         // 启动拖放
         // positionPicker.start();
