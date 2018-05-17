@@ -2,8 +2,10 @@
     <div>
       <slideShow></slideShow>
       <slidesGrid></slidesGrid>
-      <form-tab @clickList="clickList" :news="news" :industryList="industryList"></form-tab>
+      <div class="newsData"></div>
+      <touchMe></touchMe>
       <footers></footers>
+      <form-tab @clickList="clickList" :news="news" :industryList="industryList"></form-tab>
       <div>{{msg}}</div>
       <pagination :totalPage="parentTotalPage" :currentPage="parentCurrentpage" :changeCallback="parentCallback"></pagination>
       <div class="mymap">
@@ -14,6 +16,7 @@
 <script>
 import slideShow from '../components/slideshow'
 import slidesGrid from '../components/slidesGrid'
+import touchMe from '../components/touchMe'
 import footers from '../components/footer'
 import mapDrag from '../components/mapDrag'
 import formTab from '../components/formTab'
@@ -62,6 +65,7 @@ export default {
   components: {
     slideShow,
     slidesGrid,
+    touchMe,
     footers,
     mapDrag,
     formTab,
@@ -86,10 +90,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  .mymap{
-    width: 500px;
-    height: 300px;
-  }
-  .m-part .mapbox{ width: 600px; height: 400px; margin-bottom: 20px; float: left; }
-
+.newsData{
+  width: 100%;
+  height: 400px;
+  background: #eee;
+}
 </style>

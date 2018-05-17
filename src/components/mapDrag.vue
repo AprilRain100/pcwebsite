@@ -153,7 +153,7 @@ export default {
 
 <style lang="less">
   .m-map{ min-width: 500px; min-height: 300px; position: relative; }
-  .m-map .map{ width: 100%; height: 300px; }
+  .m-map .map{ width: 100%; height: 250px; }
   .m-map .search{ position: absolute; top: 10px; left: 10px; width: 285px; z-index: 1; }
   .m-map .search input{ width: 180px; border: 1px solid #ccc; line-height: 20px; padding: 5px; outline: none; }
   .m-map .search button{ line-height: 26px; background: #fff; border: 1px solid #ccc; width: 50px; text-align: center; }
