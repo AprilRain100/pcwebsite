@@ -126,6 +126,7 @@ export default {
       .title{
         color: #000;
         font-weight: 600;
+        font-size: 18px;
       }
     }
     .contactUsMain{
@@ -150,8 +151,8 @@ export default {
             height: 150px;
           }
           p{
-            height: 10px;
-            line-height: 10px;
+            height: 24px;
+            line-height: 24px;
             font-size: 14px;
           }
         }
@@ -161,8 +162,8 @@ export default {
           float: right;
           .userinfo_01{
             width: 100%;
-            height: 30px;
-            line-height:30px;
+            height: 34px;
+            line-height:34px;
             font-size: 14px;
             color: #666;
           }

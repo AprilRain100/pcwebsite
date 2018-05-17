@@ -2,15 +2,13 @@
     <div>
       <slideShow></slideShow>
       <slidesGrid></slidesGrid>
-      <div class="newsData"></div>
-      <touchMe></touchMe>
-      <footers></footers>
       <form-tab @clickList="clickList" :news="news" :industryList="industryList"></form-tab>
       <div>{{msg}}</div>
-      <pagination :totalPage="parentTotalPage" :currentPage="parentCurrentpage" :changeCallback="parentCallback"></pagination>
-      <div class="mymap">
-        <mapDrag @drag="dragMap" lat="22.524491" lng="113.942695"></mapDrag>
-      </div>
+      <!--<pagination :totalPage="parentTotalPage" :currentPage="parentCurrentpage" :changeCallback="parentCallback"></pagination>-->
+      <touchMe></touchMe>
+      <footers></footers>
+
+
     </div>
 </template>
 <script>
@@ -20,14 +18,14 @@ import touchMe from '../components/touchMe'
 import footers from '../components/footer'
 import mapDrag from '../components/mapDrag'
 import formTab from '../components/formTab'
-import pagination from '../components/pagination'
+// import pagination from '../components/pagination'
 
 export default {
   data () {
     return {
-      height: '', // 轮播图组件的高
-      imgList: [], // 轮播图组件的图片
-      news: [
+        height: '', // 轮播图组件的高
+        imgList: [], // 轮播图组件的图片
+        news: [
         {
           text: '让企业创新激发市场活力!',
           date: '2017-03-23'
@@ -69,7 +67,7 @@ export default {
     footers,
     mapDrag,
     formTab,
-    pagination
+    // pagination
   },
   methods: {
     dragMap (data) {
