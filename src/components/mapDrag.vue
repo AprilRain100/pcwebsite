@@ -19,14 +19,14 @@
       <div id="js-result" v-show="searchKey" class="result"></div>
     </div>
     <div id="js-container" class="map"></div>
-    <div v-if="false">
+    <div v-if="true">
       <ul class="info">
-        <li><span>经度：</span>{{ dragData.lng }}</li>
-        <li><span>纬度：</span>{{ dragData.lat }}</li>
+        <!--<li><span>经度：</span>{{ dragData.lng }}</li>-->
+        <!--<li><span>纬度：</span>{{ dragData.lat }}</li>-->
         <li><span>地址：</span>{{ dragData.address }}</li>
-        <li><span>最近的路口：</span>{{ dragData.nearestJunction }}</li>
-        <li><span>最近的路：</span>{{ dragData.nearestRoad }}</li>
-        <li><span>最近的POI：</span>{{ dragData.nearestPOI }}</li>
+        <!--<li><span>最近的路口：</span>{{ dragData.nearestJunction }}</li>-->
+        <!--<li><span>最近的路：</span>{{ dragData.nearestRoad }}</li>-->
+        <!--<li><span>最近的POI：</span>{{ dragData.nearestPOI }}</li>-->
       </ul>
     </div>
   </div>
@@ -64,14 +64,15 @@ export default {
     // 搜索
     handleSearch () {
       if (this.searchKey) {
-        this.placeSearch.search(this.searchKey)
+        this.placeSearch.search(this.searchKey);
       }
     },
     // 实例化地图
     initMap () {
+      var address = '';
       // 加载PositionPicker，loadUI的路径参数为模块名中 'ui/' 之后的部分
-      let AMapUI = this.AMapUI = window.AMapUI
-      let AMap = this.AMap = window.AMap
+      let AMapUI = this.AMapUI = window.AMapUI;
+      let AMap = this.AMap = window.AMap;
       AMapUI.loadUI(['misc/PositionPicker'], PositionPicker => {
         let mapConfig = {
           zoom: 16,
@@ -119,9 +120,20 @@ export default {
             nearestRoad: data.nearestRoad,
             nearestPOI: data.nearestPOI
           }
+          address = data.address || '广东省深圳市南山区粤海街道深圳百度国际大厦'
         })
         // 启动拖放
-        positionPicker.start()
+        // positionPicker.start();
+        //加载SimpleInfoWindow，loadUI的路径参数为模块名中 'ui/' 之后的部分
+        AMapUI.loadUI(['overlay/SimpleInfoWindow'], function(SimpleInfoWindow) {
+
+          var infoWindow = new SimpleInfoWindow({
+            // infoTitle: '<strong>这里是标题</strong>',
+            infoBody: '广东省深圳市南山区粤海街道深圳百度国际大厦'
+          });
+          //显示在map上
+          infoWindow.open(map, map.getCenter());
+        });
       })
     }
   },
@@ -150,5 +162,11 @@ export default {
   .info span{ display: inline-block; color: #999; }
   .amap-toolbar {
     right: 24px !important;
+  }
+  .amap-ui-smp-ifwn-info-title {
+    border: none!important;
+  }
+  .amap-ui-smp-ifwn-info-content {
+    font-size: 12px;
   }
 </style>
