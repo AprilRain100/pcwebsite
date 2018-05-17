@@ -1,12 +1,38 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import aboutUs from '@/page/aboutUs'
-import contactUs from '@/page/contactUs'
-import home from '@/page/home'
-import newsCenter from '@/page/newsCenter'
-import employers from '@/page/employers'
-import onlineMessage from '@/page/onlineMessage'
 Vue.use(Router)
+
+// 路由懒加载
+const aboutUs = resolve => {
+  import('@/page/aboutUs').then(module => {
+    resolve(module)
+  })
+};
+const contactUs = resolve => {
+  import('@/page/contactUs').then(module => {
+    resolve(module)
+  })
+};
+const home = resolve => {
+  import('@/page/home').then(module => {
+    resolve(module)
+  })
+};
+const newsCenter = resolve => {
+  import('@/page/newsCenter').then(module => {
+    resolve(module)
+  })
+};
+const employers = resolve => {
+  import('@/page/employers').then(module => {
+    resolve(module)
+  })
+};
+const onlineMessage = resolve => {
+  import('@/page/onlineMessage').then(module => {
+    resolve(module)
+  })
+};
 export default new Router({
   routes: [
     {
