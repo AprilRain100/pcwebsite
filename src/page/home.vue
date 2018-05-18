@@ -7,8 +7,6 @@
       <!--<pagination :totalPage="parentTotalPage" :currentPage="parentCurrentpage" :changeCallback="parentCallback"></pagination>-->
       <touchMe></touchMe>
       <footers></footers>
-
-
     </div>
 </template>
 <script>
@@ -16,7 +14,6 @@ import slideShow from '../components/slideshow'
 import slidesGrid from '../components/slidesGrid'
 import touchMe from '../components/touchMe'
 import footers from '../components/footer'
-import mapDrag from '../components/mapDrag'
 import formTab from '../components/formTab'
 // import pagination from '../components/pagination'
 
@@ -65,8 +62,7 @@ export default {
     slidesGrid,
     touchMe,
     footers,
-    mapDrag,
-    formTab,
+    formTab
     // pagination
   },
   methods: {
@@ -88,9 +84,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.newsData{
-  width: 100%;
-  height: 400px;
-  background: #eee;
-}
+
 </style>

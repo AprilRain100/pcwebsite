@@ -7,7 +7,7 @@
             <div class="twitter"><img src="//12461779.s61i.faiusr.com/4/AD0I0834BRAEGAAg1KacwwUozpLv9QUwDzgP.png"/>推特</div>
             <div class="linkedin"><img src="//12461779.s61i.faiusr.com/4/AD0I0834BRAEGAAg1KacwwUozpLv9QUwDzgP.png"/>领英</div>
           </div>
-          <p>联系地址：XXX省XXX市XXX县XXX路XXX号</p>
+          <p>联系地址： 广东省深圳市南山区粤海街道深圳百度国际大厦</p>
           <p>©2018 网站样板-互联网 版权所有</p>
           <p>手机版 | 本站使用凡科建站搭建 | 管理登录</p>
         </div>
@@ -52,8 +52,8 @@
       }
     }
     p{
-      height: 20px;
-      line-height: 20px;
+      height: 30px;
+      line-height: 30px;
       color: #fff;
       font-size: 14px;
     }

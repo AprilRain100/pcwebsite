@@ -132,11 +132,14 @@ export default {
     h4{
       font-weight: 600;
       text-align: center;
+      padding-top: 40px;
     }
     p{
       font-size: 14px;
       color: #888;
       text-align: center;
+      height: 30px;
+      line-height: 30px;
     }
   }
 </style>
