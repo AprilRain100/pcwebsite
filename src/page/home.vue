@@ -2,9 +2,10 @@
     <div>
       <slideShow></slideShow>
       <slidesGrid></slidesGrid>
-      <div class="newsData"></div>
+      <div class="newsData">
+        <form-tab @clickList="clickList" :news="news" :industryList="industryList"></form-tab>
+      </div>
       <touchMe></touchMe>
-      <form-tab @clickList="clickList" :news="news" :industryList="industryList"></form-tab>
       <div>{{msg}}</div>
       <pagination :totalPage="parentTotalPage" :currentPage="parentCurrentpage" :changeCallback="parentCallback"></pagination>
       <div class="mymap">

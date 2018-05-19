@@ -60,9 +60,19 @@ export default {
     let liwidth = document.querySelectorAll("#menu a")
     //背景
     let bgWidth = document.querySelector(".menubg")
+    console.log(this.$route)
     //设置背景的宽度
-    bgWidth.style.width = liwidth[0].offsetWidth + 'px'
+    bgWidth.style.width = liwidth[this.selecIndex].offsetWidth + 'px'
   },
+  beforeRouteEnter (to, from, next) {
+    console.log(to)
+    console.log(from)
+    next(vm => {
+      // 通过 `vm` 访问组件实例
+      console.log(to)
+      console.log(from)
+    })
+  }
 
 }
 </script>
@@ -106,7 +116,7 @@ html,body{
       position: absolute;
       background: #009fe9;
       height: 2px;
-      bottom: 25px;
+      bottom: 17px;
       z-index: 1;
       transition: all .3s;
       left: 0
