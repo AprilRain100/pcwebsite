@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="head">
-      <span>Internet Design</span>
+      <span><img src="http://img5.imgtn.bdimg.com/it/u=3396503126,1463448955&fm=15&gp=0.jpg" style="width: 200px;height: 60px;margin-top: 10px;" /></span>
       <div id="menu" style="float: right;">
         <a :class="{'selec': index === selecIndex}" href="javascript:;" v-for="(item, index) in nav" v-text="item.text" @click="routerLink(item.path, index)"></a>
         <div class="menubg"></div>

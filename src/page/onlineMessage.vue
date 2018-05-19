@@ -120,6 +120,9 @@ export default {
             text-align: center;
             color: #fff;
           }
+          .sendMessage:hover{
+            cursor: pointer;
+          }
         }
       }
 

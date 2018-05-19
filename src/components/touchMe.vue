@@ -118,7 +118,7 @@ export default {
 <style lang="less" scoped>
   .aboutUs{
     width:100%;
-    height: 700px;
+    height: 650px;
     .top{
       width: 100%;
       height: 100px;
@@ -126,6 +126,8 @@ export default {
       .title{
         color: #000;
         font-weight: 600;
+        font-size: 18px;
+        padding: 30px 0 10px 0;
       }
     }
     .contactUsMain{
@@ -139,10 +141,10 @@ export default {
       float: left;
       .addRess{
         width: 500px;
-        height: 250px;
+        height: 200px;
         .ewm{
           width: 150px;
-          height: 250px;
+          height: 200px;
           float: left;
           text-align: center;
           .imgSize{
@@ -150,19 +152,19 @@ export default {
             height: 150px;
           }
           p{
-            height: 10px;
-            line-height: 10px;
+            height: 24px;
+            line-height: 24px;
             font-size: 14px;
           }
         }
         .userinfo{
           width: 320px;
-          height: 250px;
+          height: 200px;
           float: right;
           .userinfo_01{
             width: 100%;
-            height: 30px;
-            line-height:30px;
+            height: 34px;
+            line-height:34px;
             font-size: 14px;
             color: #666;
           }
@@ -171,6 +173,7 @@ export default {
       .mymap{
         width: 500px;
         height: 250px;
+        margin-top: 15px;
       }
       .m-part .mapbox{ width: 600px; height:250px; margin-bottom: 20px; float: left; }
     }
@@ -179,16 +182,11 @@ export default {
       height: 500px;
       float: right;
     }
-    title {
-      font-size: 20px;
-      color: darkcyan;
-    }
-
     tr {
-      height: 60px;
+      height: 68px;
       width: 200px;
+      font-size: 14px;
     }
-
     .col1 {
       width: 90px;
       padding-left: 30px;
@@ -209,7 +207,7 @@ export default {
       border-radius: 3px;
       padding-left: 5px;
       color: white;
-      border-radius: 5px;
+      border-radius: 3px;
       border: 1px solid #dadada;
     }
 
@@ -258,8 +256,8 @@ export default {
     }
     .submit{
       width: 250px;
-      height: 40px;
-      line-height: 40px;
+      height: 45px;
+      line-height: 45px;
       background:#3faaf4;
       margin-left: 30px;
       text-align: center;

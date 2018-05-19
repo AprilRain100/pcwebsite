@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from "vue-awesome-swiper";
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
   props: {
@@ -26,127 +26,117 @@ export default {
       default: () => {
         return [
           {
-            src: require("../assets/img/1.png")
+            src: require('../assets/img/1.png')
           },
           {
-            src: require("../assets/img/2.png")
+            src: require('../assets/img/2.png')
           },
           {
-            src: require("../assets/img/3.jpg")
+            src: require('../assets/img/3.jpg')
           },
           {
-            src: require("../assets/img/4.jpg")
+            src: require('../assets/img/4.jpg')
           }
-        ];
+        ]
       }
     },
     gridHeight: {
       type: String,
-      default: "200px"
+      default: '200px'
     }
   },
-  data() {
+  data () {
     return {
       swiperOption: {
         notNextTick: true,
         slidesPerView: 3,
         spaceBetween: 30,
-        freeMode: true,
         pagination: {
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           clickable: true
         },
-        speed: 2500,
+        speed: 3000,
         freeModeMomentumBounce: false,
         loop: true,
         autoplay: {
           disableOnInteraction: false,
-          delay: 500
+          delay: 0
         }
       }
-    };
+    }
   },
   computed: {
-    swiper() {
-      return this.$refs.mySwiper.swiper;
+    swiper () {
+      return this.$refs.mySwiper.swiper
     }
   },
   methods: {
-    mouseover() {
-      this.swiper.autoplay.stop();
+    mouseover () {
+      this.swiper.autoplay.stop()
     },
-    mouseout() {
-      this.swiper.autoplay.start();
+    mouseout () {
+      this.swiper.autoplay.start()
     }
   },
   components: {
     swiper,
     swiperSlide
   }
-};
+}
 </script>
 
 <style lang="less" scoped>
-.swiper-wrapper {
-  -webkit-transition-timing-function: linear; /*之前是ease-out*/
-  -moz-transition-timing-function: linear;
-  -ms-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  transition-timing-function: linear;
-  margin: 0 auto;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-.swiper-container {
-  width: 1200px;
-  /*height: 100px;*/
-  margin-top: 50px;
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: pink;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  img {
-    width: 100%;
+  html, body {
+    position: relative;
     height: 100%;
   }
-}
-.about_us {
-  width: 100%;
-  height: 500px;
-  h4 {
-    font-weight: 600;
-    text-align: center;
-  }
-  p {
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
-    color: #888;
-    text-align: center;
+    color:#000;
+    margin: 0;
+    padding: 0;
   }
-}
+  .swiper-container {
+    width: 1200px;
+    /*height: 100px;*/
+    margin-top: 50px;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: pink;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .about_us{
+    width: 100%;
+    height: 500px;
+    h4{
+      font-weight: 600;
+      text-align: center;
+    }
+    p{
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+    }
+  }
 </style>
