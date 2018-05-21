@@ -1,7 +1,7 @@
 <template>
     <div>
       <slideShow></slideShow>
-      <slidesGrid></slidesGrid>
+      <marquee-tips></marquee-tips>
       <div class="newsData"></div>
       <touchMe></touchMe>
       <form-tab @clickList="clickList" :news="news" :industryList="industryList"></form-tab>
@@ -21,6 +21,7 @@ import footers from '../components/footer'
 import mapDrag from '../components/mapDrag'
 import formTab from '../components/formTab'
 import pagination from '../components/pagination'
+import marqueeTips from '../components/marqueeTips'
 
 export default {
   data () {
@@ -69,6 +70,7 @@ export default {
     footers,
     mapDrag,
     formTab,
+    marqueeTips,
     pagination
   },
   methods: {

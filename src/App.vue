@@ -60,7 +60,6 @@ export default {
     let liwidth = document.querySelectorAll("#menu a")
     //背景
     let bgWidth = document.querySelector(".menubg")
-    console.log(this.$route)
     //设置背景的宽度
     bgWidth.style.width = liwidth[this.selecIndex].offsetWidth + 'px'
   },
